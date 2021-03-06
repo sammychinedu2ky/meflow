@@ -9,7 +9,7 @@ async function run() {
     // https://help.github.com/en/actions/automating-your-workflow-with-github-actions/authenticating-with-the-github_token#about-the-github_token-secret
     const myToken = core.getInput('myToken');
 
-    const octokit = github.getOctokit(myToken)
+  //  const octokit = github.getOctokit(myToken)
 
     // You can also pass in additional options as a second parameter to getOctokit
     // const octokit = github.getOctokit(myToken, {userAgent: "MyActionVersion1"});
@@ -29,6 +29,7 @@ async function run() {
     async function print(path) {
       const files = await fs.promises.readdir(path);
       for (const file of files) {
+          core.info('sammyboy')
         core.info(file);
       }
     }
