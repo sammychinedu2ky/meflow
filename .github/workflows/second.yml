@@ -1,5 +1,11 @@
 name: mynodeflow2
-on: push
+on: 
+  push:
+  issue_comment:
+    types: [created, edited]
+  issues:
+    types: opened
+ 
  
 jobs:
     myjob:
