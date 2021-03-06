@@ -1,7 +1,9 @@
 name: mynodeflow
 on:
-  issue_comment:
+  - issue_comment:
     types: [created, edited]
+  - issues:
+    types: opened
 jobs:
   myjob:
     runs-on: ubuntu-latest
