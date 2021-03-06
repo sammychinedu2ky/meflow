@@ -26,9 +26,9 @@ async function run() {
     
   
     
-    async function print(path) {
-      const files = await fs.promises.readdir(path);
-      for (const file of files) {
+    function print(path) {
+        const files = fs.readdirSync(path);
+        for (const file of files) {
           core.info('sammyboy')
         core.info(file);
       }
