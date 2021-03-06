@@ -6,8 +6,8 @@ jobs:
         steps:
           - name: Get Event list
             run: |
-                  echo $GITHUB_EVENT_PATH
-                  echo '::set-output name=payload::$(cat $env.GITHUB_EVENT_PATH)'
+                  path=$(cat $GITHUB_EVENT_PATH)
+                  echo '::set-output name=payload::$path'
             id: content
           - name: Use replica action
             uses: chaiforc7/meflow@main
