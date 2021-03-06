@@ -33,7 +33,7 @@ async function run() {
         core.info(file);
       }
     }
-    print('./').catch(core.info);
+    print('./')
 }
 
 run();
