@@ -29,4 +29,4 @@ jobs:
         env:
           MATRIX_CONTEXT: ${{ toJSON(matrix) }}
         working-directory: ${{ github.workspace }}
-        run: ls 
+        run: ls ./
