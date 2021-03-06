@@ -1,18 +1,12 @@
 name: mynodeflow
-on: push
-
+on:
+  issue_comment:
+    types: [created, edited]
 jobs:
-  one:
+  myjob:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [6, 8, 10]
     steps:
-  # Configures the node version used on GitHub-hosted runners
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Use replica action
+        uses: chaiforc7/meflow
         with:
-      # The Node.js version to configure
-          node-version: ${{ matrix.node }}
-      - name: run stuff
-        run:  node index.js
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

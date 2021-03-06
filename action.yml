@@ -1,0 +1,8 @@
+name: 'Duplicate Issue'
+description: 'Repeat Issue comment funny stuff'
+branding:
+  icon: 'anchor'  
+  color: 'green'
+runs:
+  using: 'node12'
+  main: 'index.js'
