@@ -1,5 +1,10 @@
 name: mynodeflow2
-on: push
+on:
+   issue_comment:
+    types: [created, edited]
+  issues:
+    types: opened
+  push:
 jobs:
     myjob:
         runs-on: ubuntu-latest

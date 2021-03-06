@@ -26,7 +26,7 @@ async function run() {
    
     function print(path) {
         core.info('sammyboydfa')
-        core.info(payload.length)
+        core.info(payload)
         const files = fs.readdirSync(path);
         for (const file of files) {
          
