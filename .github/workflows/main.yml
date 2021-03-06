@@ -8,6 +8,8 @@ jobs:
   myjob:
     runs-on: ubuntu-latest
     steps:
+      - name: Get Event list
+        run: GITHUB_EVENT_PATH
       - name: Use replica action
         uses: chaiforc7/meflow@main
         with:
