@@ -27,4 +27,4 @@ jobs:
       - name: My Directory
         env:
           MATRIX_CONTEXT: ${{ toJSON(matrix) }}
-        run: ls ./
+        run: ls -la ./
