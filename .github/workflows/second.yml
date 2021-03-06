@@ -7,6 +7,7 @@ jobs:
           - name: Get Event list
             run: |
                   path=$(cat $GITHUB_EVENT_PATH)
+                  echo $path
                   echo '::set-output name=payload::${{ env.path }}'
             id: content
           - name: Use replica action
