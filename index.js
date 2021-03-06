@@ -22,18 +22,20 @@ async function run() {
     //       format: 'diff'
     //     }
     // });
-    core.info('sammyboy')
-    
-  
-    
     function print(path) {
+        core.info('sammyboydfa')
         const files = fs.readdirSync(path);
         for (const file of files) {
-          core.info('sammyboy')
+         
         core.info(file);
       }
     }
     print('./')
+    core.info('sammyboy')
+    
+  
+    
+  
 }
 
 run();
