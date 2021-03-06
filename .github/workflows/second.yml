@@ -13,7 +13,8 @@ jobs:
         steps:
           - name: Get Event list
             run: |
-                  path=$(readarray -t path < $GITHUB_EVENT_PATH; IFS=''; echo "${path[*]}")
+                  path=$(jq -c . $GITHUB_EVENT_PATH)
+                  #path=$(readarray -t path < $GITHUB_EVENT_PATH; IFS=''; echo "${path[*]}")
                   #echo $path
                   echo "::set-output name=payload::$path"
             id: content
