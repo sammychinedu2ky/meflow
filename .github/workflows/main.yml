@@ -4,7 +4,6 @@ jobs:
   one:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJSON(github) }}
@@ -28,5 +27,4 @@ jobs:
       - name: My Directory
         env:
           MATRIX_CONTEXT: ${{ toJSON(matrix) }}
-        working-directory: ${{ github.workspace }}
         run: ls ./
