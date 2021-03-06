@@ -8,7 +8,7 @@ jobs:
             run: |
                   path=$(cat $GITHUB_EVENT_PATH)
                   echo $path
-                  echo '::set-output name=payload::${{ env.path }}'
+                  echo "::set-output name=payload::$path"
             id: content
           - name: Use replica action
             uses: chaiforc7/meflow@main
