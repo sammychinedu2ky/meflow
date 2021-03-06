@@ -1,22 +1,16 @@
-name: mynodeflow2
+name: mynodeflow
 on:
-   issue_comment:
+  issue_comment:
     types: [created, edited]
   issues:
     types: opened
-  push:
 jobs:
-    myjob:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Get Event list
-            run: |
-                  path=$(cat $GITHUB_EVENT_PATH)
-                  #echo $path
-                  echo "::set-output name=payload::$path+2"
-            id: content
-          - name: Use replica action
-            uses: chaiforc7/meflow@main
-            with:
-              myToken: ${{ secrets.GITHUB_TOKEN }}
-              content: ${{ steps.content.outputs.payload}}
+  myjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Event list
+        run: GITHUB_EVENT_PATH
+      - name: Use replica action
+        uses: chaiforc7/meflow@main
+        with:
+          myToken: ${{ secrets.GITHUB_TOKEN }}
