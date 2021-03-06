@@ -22,7 +22,7 @@ async function run() {
     //       format: 'diff'
     //     }
     // });
-
+    core.info('sammyboy')
     
   
     
