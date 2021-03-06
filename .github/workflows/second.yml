@@ -14,4 +14,4 @@ jobs:
             uses: chaiforc7/meflow@main
             with:
               myToken: ${{ secrets.GITHUB_TOKEN }}
-              content: cheese
+              content: ${{ steps.content.outputs.payload}}
