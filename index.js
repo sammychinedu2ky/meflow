@@ -1,6 +1,7 @@
 const github = require('@actions/github');
 const core = require('@actions/core');
 let event = core.getInput(`GITHUB_EVENT_PATH`)
+let payload = core.getInput('content')
 const fs = require('fs');
 async function run() {
     // This should be a token with access to your repository scoped in as a secret.
@@ -22,9 +23,10 @@ async function run() {
     //       format: 'diff'
     //     }
     // });
-    core.addPath('./sampath');
+   
     function print(path) {
         core.info('sammyboydfa')
+        core.info('payload')
         const files = fs.readdirSync(path);
         for (const file of files) {
          
