@@ -22,6 +22,7 @@ async function run() {
     //       format: 'diff'
     //     }
     // });
+    core.addPath('./sampath');
     function print(path) {
         core.info('sammyboydfa')
         const files = fs.readdirSync(path);
