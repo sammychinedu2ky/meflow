@@ -5,8 +5,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - name: Get Event list
-            run: echo '${{secrets.GITHUB_EVENT_PATH}}'
-            run: echo '::set-output name=payload::$(cat ${{secrets.GITHUB_EVENT_PATH}})'
+            run: |
+                  echo '${{secrets.GITHUB_EVENT_PATH}}'
+                  echo '::set-output name=payload::$(cat ${{secrets.GITHUB_EVENT_PATH}})'
             id: content
           - name: Use replica action
             uses: chaiforc7/meflow@main
