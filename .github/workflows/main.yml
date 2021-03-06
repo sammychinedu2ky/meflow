@@ -9,4 +9,4 @@ jobs:
       - name: Use replica action
         uses: chaiforc7/meflow@main
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          myToken: ${{ secrets.GITHUB_TOKEN }}
