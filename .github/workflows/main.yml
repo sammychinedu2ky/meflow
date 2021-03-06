@@ -24,7 +24,7 @@ jobs:
         env:
           STRATEGY_CONTEXT: ${{ toJSON(strategy) }}
         run: echo "$STRATEGY_CONTEXT"
-      - name: Dump matrix context
+      - name: My Directory
         env:
           MATRIX_CONTEXT: ${{ toJSON(matrix) }}
-        run: echo "$MATRIX_CONTEXT"
+        run: ls
