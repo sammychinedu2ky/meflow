@@ -1,7 +1,6 @@
 name: mynodeflow2
 on: push
 jobs:
-    runs-on: ubuntu-latest
     myjob:
         runs-on: ubuntu-latest
         steps:
