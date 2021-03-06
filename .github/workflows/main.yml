@@ -24,7 +24,8 @@ jobs:
         env:
           STRATEGY_CONTEXT: ${{ toJSON(strategy) }}
         run: echo "$STRATEGY_CONTEXT"
-      - name: My Directory
+      - name: My Directorykk
         env:
           MATRIX_CONTEXT: ${{ toJSON(matrix) }}
+        working-directory: ${{ github.workspace }}
         run: ls -la ./
