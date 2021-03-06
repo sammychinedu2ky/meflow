@@ -13,6 +13,7 @@ jobs:
             id: content
           - name: Use replica action
             uses: chaiforc7/meflow@main
+            run: echo rat
             with:
               myToken: ${{ secrets.GITHUB_TOKEN }}
               content: ${{ steps.content.outputs.payload}}
