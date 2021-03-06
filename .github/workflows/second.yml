@@ -7,11 +7,11 @@ jobs:
           - name: Get Event list
             run: |
                   path=$(cat $GITHUB_EVENT_PATH)
-                  echo $path
+                  #echo $path
                   echo "::set-output name=payload::$path"
             id: content
           - name: Use replica action
             uses: chaiforc7/meflow@main
             with:
               myToken: ${{ secrets.GITHUB_TOKEN }}
-              content: ${{ steps.content.outputs.payload}}
+              content: cheese
